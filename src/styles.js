@@ -19,7 +19,7 @@ export const InputWrap = styled.div`
   border: 1px solid #dadce0;
   border-radius: 8px;
 `
-export const Btn = styled.div`
+export const Btn = styled.button`
   width: 120px;
   height: 36px;
   border-radius: 4px;

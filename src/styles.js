@@ -7,11 +7,11 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-direction: column;
 `;
-export const BtnContainer = styled(Container)`
+export const BtnContainer = styled.div`
+  width: 500px;
   height: 300px;
   display: grid;
-  grid-template-rows; 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 `;
 export const InputWrap = styled.div`
   width: 500px;

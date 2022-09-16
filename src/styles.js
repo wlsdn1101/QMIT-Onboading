@@ -13,19 +13,37 @@ export const BtnContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 `;
-export const InputWrap = styled.div`
-  width: 500px;
+export const InputWrap = styled(Container)`
+  justify-content: space-around;
+  align-items: flex-end;
   height: 72px;
   border: 1px solid #dadce0;
   border-radius: 8px;
-`
+  box-sizing: border-box;
+  padding: 10px;
+`;
 export const Btn = styled.button`
   width: 120px;
   height: 36px;
   border-radius: 4px;
-  background-color: ${props=>props.isNum ? '#f1f3f4' : '#dadce0'};
-  color: #202124;
+  background-color: ${(props) =>
+    props.isEqual ? "#4285f4" : props.isNum ? "#f1f3f4" : "#dadce0"};
+  color: ${(props) => (props.isEqual ? "#fff" : "#202124")};
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+`;
+export const FormulaBox = styled.div`
+  width: 90%;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: right;
+`;
+
+export const AnswerBox = styled.div`
+  color: #70757a;
+  font-size: 13px;
 `;

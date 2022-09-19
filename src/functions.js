@@ -54,19 +54,23 @@ const changeFormulaValue = (formula, signLocaion = 1) => {
 };
 
 const indexOfPrioritySign = (formula) => {
+  let checkPriority = -1;
   if (formula.indexOf("%") > 0) {
     return formula.indexOf("%");
   }
 
   if (formula.indexOf("*") > 0) {
-    return formula.indexOf("*");
+    checkPriority = formula.indexOf("*");
   }
 
-  if (formula.indexOf("/") > 0) {
-    return formula.indexOf("/");
+  if (checkPriority < 0 || checkPriority > formula.indexOf("/")) {
+    checkPriority = formula.indexOf("/");
   }
 
-  return 1;
+  if (checkPriority === -1) {
+    checkPriority = 1;
+  }
+  return checkPriority;
 };
 
 export const caculation = (formula) => {

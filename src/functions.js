@@ -55,6 +55,7 @@ const changeFormulaValue = (formula, signLocaion = 1) => {
 
 const indexOfPrioritySign = (formula) => {
   let checkPriority = -1;
+  
   if (formula.indexOf("%") > 0) {
     return formula.indexOf("%");
   }

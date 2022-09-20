@@ -7,12 +7,14 @@ export const Container = styled.div`
   justify-content: space-between;
   flex-direction: column;
 `;
+
 export const BtnContainer = styled.div`
   width: 500px;
   height: 300px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 `;
+
 export const InputWrap = styled(Container)`
   justify-content: space-around;
   align-items: flex-end;
@@ -22,6 +24,7 @@ export const InputWrap = styled(Container)`
   box-sizing: border-box;
   padding: 10px;
 `;
+
 export const Btn = styled.button`
   width: 120px;
   height: 36px;
@@ -36,11 +39,15 @@ export const Btn = styled.button`
   border: none;
   cursor: pointer;
 `;
+
 export const FormulaBox = styled.div`
-  width: 90%;
+  width: 100%;
   font-size: 30px;
   font-weight: 500;
-  text-align: right;
+  overflow: hidden;
+  & span {
+    float: right;
+  }
 `;
 
 export const AnswerBox = styled.div`
